@@ -1,0 +1,43 @@
+<script>
+    function sum(arg1, arg2) {
+        return arg1 + arg2;
+    }
+
+    function minus(arg1, arg2) {
+        return arg1 - arg2;
+    }
+
+    function mult(arg1, arg2) {
+        return arg1 * arg2;
+    }
+
+    function div(arg1, arg2) {
+        return arg1 / arg2;
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case 'сложение':
+                var resultSum = sum(arg1, arg2);
+                return resultSum;
+                break;
+            case 'вычитание':
+                var resultMinus = minus(arg1, arg2)
+                return resultMinus;
+                break;
+            case 'деление':
+                var resultDiv = div(arg1, arg2);
+                return resultDiv;
+                break;
+            case 'умножение':
+                var resultMult = mult(arg1, arg2);
+                return resultMult;
+                break;
+        }
+    }
+
+    var arg1 = +prompt("Введите первое число");
+    var arg2 = +prompt("Введите второе число");
+    var operation = prompt("Введите желаемое действие (сложение, вычитание, деление, умножение)");
+    alert(mathOperation(arg1, arg2, operation));
+</script>

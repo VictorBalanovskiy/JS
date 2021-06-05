@@ -1,0 +1,16 @@
+<script>
+    function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    var a = Math.round(getRandom(-100, 100));
+    var b = Math.round(getRandom(-100, 100));
+
+    if (a > 0 && b > 0) {
+        alert("Разность a и b равна " + (a - b));
+    } else if (a < 0 && b < 0) {
+        alert("Произведение a и b равно " + (a * b));
+    } else if (a <= 0 && b >= 0 || a >= 0 && b <= 0) {
+        alert("Сумма a и b равна " + (a + b));
+    }
+</script>
