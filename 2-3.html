@@ -1,0 +1,34 @@
+<script>
+    var s = 0;
+    var goods = [{
+            title: "Товар 1",
+            price: 100
+        },
+        {
+            title: "Товар 1",
+            price: 200
+        },
+        {
+            title: "Товар 1",
+            price: 300
+        },
+        {
+            title: "Товар 1",
+            price: 400
+        },
+        {
+            title: "Товар 1",
+            price: 500
+        }
+    ]
+
+    function countBasketPrice() {
+        for (var item of goods) {
+            s += item.price;
+        }
+        return s;
+    }
+
+    countBasketPrice();
+    alert(s);
+</script>
