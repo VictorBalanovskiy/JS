@@ -1,0 +1,27 @@
+<script>
+    var number = prompt("Введите число от 0 да 9999");
+    var obj = numToObj(number);
+
+    function numToObj(number) {
+        var arrNumber = number.split('');
+        while (arrNumber.length < 4) {
+            arrNumber.unshift(0);
+        }
+        var objNumber = {};
+        if (arrNumber.length > 4) {
+            return null;
+        } else {
+            objNumber['тысячи'] = +arrNumber[0];
+            objNumber['сотни'] = +arrNumber[1];
+            objNumber['десятки'] = +arrNumber[2];
+            objNumber['единицы'] = +arrNumber[3];
+            return objNumber;
+        }
+    }
+
+    if (obj == null) {
+        console.log("Вы ввели неверное число! (от 0 до 9999)");
+    } else {
+        console.log(obj);
+    }
+</script>
